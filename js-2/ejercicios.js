@@ -77,3 +77,25 @@ console.log(maxIndex([10, 9, 8, 7, 6, 5, 4])) // 0
 console.log(maxIndex([])) // -1
 console.log("");  // Para una linea en blanco
 
+function Join(datos) {
+    
+  if (datos.length===0) {
+    return "Prueba de la función Join, para los valores --> [] = vacio";      
+  }   
+  var texto = "";
+  var resultado="";
+
+  for (let i = 0; i < datos.length; i ++) {   
+    if (i===0) {
+      texto += datos[i];
+    } else {
+      texto +=   "," + datos[i];
+    }      
+    resultado +=   " " + datos[i];          
+    }
+ return "Prueba de la función Join, para los valores --> [" + texto + "] = " + resultado;    
+}
+
+console.log(Join(["Hola", "Mundo"])) // "Hola Mundo"
+console.log(Join(["Make", "It", "Real"])) // "Make It Real"
+console.log(Join([])) // ""
