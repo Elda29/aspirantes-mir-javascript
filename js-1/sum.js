@@ -1,7 +1,7 @@
 function suma(nro) {
    let i     = 1;
    var texto ="";
-   var total =0;
+   var total = 0;
 
 while (i <= nro) {
    if (i===1) {

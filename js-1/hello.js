@@ -2,8 +2,8 @@ function hola(nombre) {
     console.log("Hola " + nombre +"!");
   }
   
-  hola("Ëlda");
-  hola("Pedro");
-  hola("Juan");
+  hola("Elda ");
+  hola("Pedro ");
+  hola("Juan ");
   hola("");
   
