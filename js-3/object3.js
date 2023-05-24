@@ -1,18 +1,4 @@
 
-/*let rec = [{ nombre: "Sandwich", 
-             ingredientes:[{nombre:"Pan", cantidad:2},{nombre:"Queso", cantidad:1}]}];
-
-
-let receta= [{ 
-    nombre: "Sandwich",
-    ingredientes: [{nombre:"Pan", cantidad:2},
-                   {nombre:"Queso", cantidad:1}
-                  ]
-             }];
-
-             
-             */
-
 console.log(" " ); // imprime linea  en blanco
 console.log(" ************************* Bonus II  ***********************************" ); 
 console.log(" " ); // imprime linea  en blanco
@@ -24,9 +10,9 @@ console.log(" " ); // imprime linea  en blanco
     { nombre: "Queso", cantidad: 1 }
   ];
   
-  let receta = [
+  let receta = 
     { nombre: "Sandwich", ingredientes }   
-  ];
+  ;
 
   let total = 0;
 

@@ -1,29 +1,43 @@
-let pedro = [{
-  nombre: "Pedro",
-  apellido: "Perez",
-  edad: 30,    
-  hobbies: ["programa", "squash", "piano"],
-  estatura: 1.8,
-  saludar: function() {
-    return "  Hola, me llamo " + this.nombre + " " + this.apellido}
-  }];
+let pedro = {
+  Nombre: "Pedro",
+  Apellido: "Perez",
+  Edad: 30,
+  Hobbies: ["programa", "squash", "piano"],
+  Estatura: 1.8,
+  Saludar: function () {
+    console.log( "  Hola, me llamo " + this.Nombre + " " + this.Apellido);
+  },
+};
 
-  console.log(" ************* 1 era parte del ejercicio ****************" ); 
-  console.log(" " ); // imprime linea  en blanco
-  console.log("  Edad :" + pedro[0].edad); // imprime edad
-  console.log(" " ); // imprime linea  en blanco
+console.log(" "); // imprime linea  en blanco
+console.log(" ************* Imprime en la consola el valor de la llave edad ****************");
+console.log(" "); // imprime linea  en blanco
 
-  console.log(" ************* 2 da parte del ejercicio ****************" ); 
-    
+let llave = "Edad";
 
-  for (let i=0; i < pedro.length; i++) {
-    let linea = pedro[i];
-    console.log("  Nombre:   " + linea.nombre);
-    console.log("  Apellido: " + linea.apellido);
-    console.log("  Edad:     " + linea.edad);
-    console.log("  Estatura: " + linea.estatura);
-    console.log("  Hobbies:  " + linea.hobbies);    
-    console.log("  Saludo :  " + linea.saludar());    
+console.log("  "+llave+ "  :" +pedro[llave]);
+
+console.log(" "); // imprime linea  en blanco
+console.log(" ************* Recorre todas las propiedades e imprímelas en consola ****************");
+console.log(" ******************     Probando con hasOwnProperty   *******************************");
+console.log(" "); // imprime linea  en blanco
+for (let llave in pedro) {
+  if (pedro.hasOwnProperty(llave)) {
+    console.log("  "+llave+ ": " + pedro[llave])
   }
+}
 
-  
+console.log(" ************* Recorre todas las propiedades e imprímelas en consola ****************");
+console.log(" ******************     Probando con Object.keys***   *******************************");
+console.log(" "); // imprime linea  en blanco
+
+let llaves = Object.keys(pedro);
+for (let i=0; i < llaves.length; i++) {
+  let llave = llaves[i];
+  console.log("  "+llave+ ": " + pedro[llave]);
+}
+
+console.log(" ******************   Llamado a la función saluda    *******************************");
+console.log(" "); // imprime linea  en blanco
+pedro.Saludar();
+console.log(" "); // imprime linea  en blanco
